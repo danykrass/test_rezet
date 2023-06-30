@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    margin: 25px 10px 0 0;
+    text-transform: uppercase;
+}
+svg {
+    color: #fff;
+    fill: #fff;
+}
+a, a:focus{
+    text-decoration: none;
+    text-align: center;
+}
+a svg {
+    text-decoration: none;
+    text-align: center;
+    vertical-align: sub;
+}
