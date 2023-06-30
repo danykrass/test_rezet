@@ -21,3 +21,14 @@ a svg {
     text-align: center;
     vertical-align: sub;
 }
+.text-danger {
+    height: 20px;
+    display: block;
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+}
+.card-header:first-child {
+    background: #363636;
+    color: #fff;
+    text-transform: uppercase;
+}
