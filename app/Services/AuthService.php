@@ -100,4 +100,23 @@ class AuthService
         return null;
     }
 
+    public function updateWeatherData($userId, $latitude, $longitude)
+    {   
+        $userId = Auth::id();
+        $weatherData = WeatherData::where('user_id', $userId)->first();
+        $uuid = request()->cookie('uuid');
+        if (!$weatherData) {
+            WeatherData::create([
+                'user_id' => $userId,
+                'uuid' => $uuid,
+                'latitude' => $latitude,
+                'longitude' => $longitude,
+            ]);
+        } else {
+            $weatherData->latitude = $latitude;
+            $weatherData->longitude = $longitude;
+            $weatherData->save();
+        }
+    }
+
 }
