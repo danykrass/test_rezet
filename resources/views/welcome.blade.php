@@ -177,17 +177,15 @@ function sendUserCoordinates() {
       })
         .then(function(response) {
           if (response.ok) {
-            console.log('Данные успешно отправлены');
           } else {
-            throw new Error('Ошибка при отправке запроса: ' + response.status);
+            throw new Error(response.status);
           }
         })
         .catch(function(error) {
-          console.error('Произошла ошибка:', error);
+          console.error(error);
         });
     },
     function(error) {
-      console.error('Произошла ошибка при получении координат:', error);
     }
   );
 }
