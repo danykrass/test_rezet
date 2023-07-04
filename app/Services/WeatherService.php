@@ -11,7 +11,7 @@ class WeatherService implements WeatherServiceInterface
 {
     public function getWeatherData($latitude, $longitude)
     {
-        $apiKey = 'd5caae74628fc2cc9bfacc60aa6855c9';
+        $apiKey = '';
         $apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=' . $latitude . '&lon=' . $longitude . '&appid=' . $apiKey;
 
         try {
